@@ -42,8 +42,7 @@ jobs:
           tag: ${{ needs.fetch-aseprite-info.outputs.release-tag }}
           body: Aseprite-${{ needs.fetch-aseprite-info.outputs.release-tag }}
           skipIfReleaseExists: true
-          token: ${{ secrets.GH_PAT }}
-
+          token: ${{ secrets.RELEASE_TOKEN }}
   build-aseprite:
     name: Build Aseprite
     needs: create-release
